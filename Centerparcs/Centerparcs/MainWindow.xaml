@@ -1,0 +1,29 @@
+﻿<Window x:Class="Centerparcs.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Centerparcs"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800"
+        Background="Lightgreen"
+        Loaded="Window_Loaded">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition Width="Auto"></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        <WrapPanel Width="260" Margin="10" Grid.Column="1" Background="White" HorizontalAlignment="Center">
+            <Label MinWidth="250" Margin="10" Foreground="green" HorizontalContentAlignment="Center" FontSize="40" Content="Center Parcs"></Label>
+            <Label FontWeight="Bold" Content="Type woning" MinWidth="250" Margin="10"></Label>
+            <ComboBox Name="typeCollageComboBox" Width="250" Margin="10" SelectionChanged="typeCollageComboBox_SelectionChanged"></ComboBox>
+            <Label FontWeight="Bold" Margin="10" Content="Aantal dagen"></Label>
+            <ComboBox Margin="10" Name="countDaysComboBox" MinWidth="250" DropDownClosed="countDaysComboBox_DropDownClosed"></ComboBox>
+            <Label FontWeight="Bold" Margin="10" Content="Prijs"></Label>
+            <TextBox Margin="10" MinWidth="250" Name="priceTextBox" IsEnabled="False"></TextBox>
+        
+        </WrapPanel>
+        
+    </Grid>
+</Window>
